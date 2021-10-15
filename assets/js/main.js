@@ -34,11 +34,12 @@ const text = [
 // ora viene il macello: comincio il/i ciclo/i
 
 //boh, mi dà l'idea che questo mi dovrebbe funzionare ma non è così, ora pusho e mangio
-document.querySelector(".down").addEventListener ("click", function() {
+document.getElementById("down").addEventListener ("click", function() {
     for (let i = 0; i < items.length; i++) {
         const heroImage = items[i];
-        document.getElementById(imageContainer).innerHTML = `<img src="./assets/${heroImage}" alt=""></img>`;
+        document.getElementById("imageContainer").innerHTML = `<img src="./assets/${heroImage}" alt=""></img>`;
     }
 
 }
 )
+

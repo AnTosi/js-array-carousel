@@ -66,11 +66,11 @@ button {
     transform: translate(-50%, 0);
 }
 
-button.up {   
+button#up {   
     top: 10px;  
 }
 
-button.down {   
+button#down {   
     bottom: 10px;  
 }
 #svezia {
