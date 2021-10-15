@@ -75,19 +75,20 @@ down.addEventListener ("click", function(){
     //current conta nostra posizione, il if minore a 4 è tentativo per rendere ciclo "infinito"
     if ([current] < 4) {
         ++current;
+    } else {
+        current = 0;
+    }
 
     //qua cerco di selezionare "tutte" quelle che hanno active e glie lo levo, poi lo metto alla nostra posizione
-        document.querySelector(".heroImage.active").remove("active");
+        document.querySelector(".heroImage.active").classList.remove("active");
     //uso get el by class name per avere un array di tutti gli elementi con quella classe, così da poter selezionare l'[n-esimo] elemento dell'array
         document.getElementsByClassName("heroImage")[current].classList.add("active");
 
     //come sopra ma per le foto della thumbnail
-        document.querySelector(".thumb.active").remove("active");
+        document.querySelector(".thumb.active").classList.remove("active");
         document.getElementsByClassName("thumb")[current].classList.add("active");
     // }
     }
-    else {
-        let current = 0;
-        console.log([current]);
-    }
-})
+)
+
+//ho fatto questa cosa
