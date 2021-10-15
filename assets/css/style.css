@@ -80,3 +80,13 @@ button.down {
 #paradise {
     position: relative;
 }
+
+#heroImage img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#imageContainer {
+    height: 300px;
+}
