@@ -30,12 +30,12 @@ const text = [
     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 ]
 
-const itemsRef = document.querySelector(".items");
+const heroImgCont = document.getElementById("heroImageContainer");
 const thumbsRef = document.querySelector(".thumbs");
 
 let heroImage = ``;
 // let thumb = ``;
-let active = 0;
+let current = 0;
 
 
 // ora viene il macello: comincio il/i ciclo/i
@@ -64,10 +64,26 @@ for (let i = 0; i < title.length; i++) {
 }
 
 
-// qua stampo tutto il ciclo sopra, thumb con + perché mi servono tutte insieme
-heroImageContainer.innerHTML = heroImage;
+// qua stampo tutto il ciclo sopra per avere le 5 hero image nascoste
+heroImgCont.innerHTML += heroImage;
 
-document.getElementsByClassName("heroImage")[active].classList.add("active");
+document.getElementsByClassName("heroImage")[current].classList.add("active");
 
-document.getElementsByClassName("thumb")[active].classList.add("active");
+document.getElementsByClassName("thumb")[current].classList.add("active");
 
+// event listener con freccetta giù
+document.getElementById("down").addEventListener ("click", function(){
+    //current conta nostra posizione, il if minore a 4 è tentativo per rendere ciclo "infinito"
+    if ([current] < 4) {
+        ++[current];
+
+    //qua cerco di selezionare "tutte" quelle che hanno active e glie lo levo, poi lo metto alla nostra posizione
+        document.querySelector(".heroImage.active").remove("active");
+    //uso get el by class name per avere un array di tutti gli elementi con quella classe, così da poter selezionare l'[n-esimo] elemento dell'array
+        document.getElementsByClassName("heroImage")[current].classList.add("active");
+
+    //come sopra ma per le foto della thumbnail
+        document.querySelector(".thumb.active").remove("active");
+        document.getElementsByClassName("thumb")[current].classList.add("active");
+    }
+})
