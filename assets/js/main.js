@@ -30,16 +30,44 @@ const text = [
     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 ]
 
+const itemsRef = document.querySelector(".items");
+const thumbsRef = document.querySelector(".thumbs");
+
+let heroImage = ``;
+// let thumb = ``;
+let active = 0;
+
 
 // ora viene il macello: comincio il/i ciclo/i
 
 //boh, mi dà l'idea che questo mi dovrebbe funzionare ma non è così, ora pusho e mangio
-document.getElementById("down").addEventListener ("click", function() {
-    for (let i = 0; i < items.length; i++) {
-        const heroImage = items[i];
-        document.getElementById("imageContainer").innerHTML = `<img src="./assets/${heroImage}" alt=""></img>`;
-    }
 
+//provo a mettere i+1 come lunghezza
+// let currentImage = items[i];
+
+for (let i = 0; i < title.length; i++) {
+    heroImage += `
+        <div class="heroImage">
+            <div class="imageContainer">
+                <img src="./assets/${items[i]}" alt="">
+            </div>
+
+            <div class="heroText">
+                <h2 class="title">
+                    ${title[i]}
+                </h2>
+                <p class="text">
+                    ${text[i]}
+                </p>
+            </div>
+        </div>`;
 }
-)
+
+
+// qua stampo tutto il ciclo sopra, thumb con + perché mi servono tutte insieme
+heroImageContainer.innerHTML = heroImage;
+
+document.getElementsByClassName("heroImage")[active].classList.add("active");
+
+document.getElementsByClassName("thumb")[active].classList.add("active");
 

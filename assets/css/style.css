@@ -14,23 +14,24 @@ body {
     height: 300px;
     margin-top: 10%;
     display: flex;
-
+    position: relative;
 }
 
-#heroImage {
+.heroImage {
     width: 700px;
     height: 300px;
     position: relative;
-    background-color: turquoise;
+    display: none;
 }
 
 #imageSelector {
     height: 300px;
     width: 135px;
+    position: relative;
 }
 
 .thumb {
-    opacity: 0.8;
+    opacity: 0.5;
     height: calc(300px / 5);
 }
 
@@ -49,10 +50,15 @@ body {
     color: white;
 }
 
-.active {
+.thumb.active {
     filter: brightness(1);
-    border: 2px solid white;
+    border: 2px solid rgb(196, 209, 175);
 }
+
+.heroImage.active {
+    display: block;
+}
+
 
 button {
     height: 20px;
@@ -73,20 +79,14 @@ button#up {
 button#down {   
     bottom: 10px;  
 }
-#svezia {
-    position: relative;
-}
 
-#paradise {
-    position: relative;
-}
 
-#heroImage img {
+.heroImage img {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
-#imageContainer {
+.imageContainer {
     height: 300px;
 }
