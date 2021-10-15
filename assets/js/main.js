@@ -34,7 +34,7 @@ const heroImgCont = document.querySelector(".heroImageContainer");
 
 let heroImage = ``;
 // let thumb = ``;
-let current = 0;
+let current = 3;
 
 
 // ora viene il macello: comincio il/i ciclo/i
@@ -71,18 +71,18 @@ document.getElementsByClassName("heroImage")[current].classList.add("active");
 document.getElementsByClassName("thumb")[current].classList.add("active");
 
 // event listener con freccetta giù
-// document.getElementById("down").addEventListener ("click", function(){
-//     //current conta nostra posizione, il if minore a 4 è tentativo per rendere ciclo "infinito"
-//     if ([current] < 4) {
-//         ++[current];
+document.getElementById("down").addEventListener ("click", function(){
+    //current conta nostra posizione, il if minore a 4 è tentativo per rendere ciclo "infinito"
+    if ([current] < 4) {
+        ++[current];
 
-//     //qua cerco di selezionare "tutte" quelle che hanno active e glie lo levo, poi lo metto alla nostra posizione
-//         document.querySelector(".heroImage.active").remove("active");
-//     //uso get el by class name per avere un array di tutti gli elementi con quella classe, così da poter selezionare l'[n-esimo] elemento dell'array
-//         document.getElementsByClassName("heroImage")[current].classList.add("active");
+    //qua cerco di selezionare "tutte" quelle che hanno active e glie lo levo, poi lo metto alla nostra posizione
+        document.querySelector(".heroImage.active").remove("active");
+    //uso get el by class name per avere un array di tutti gli elementi con quella classe, così da poter selezionare l'[n-esimo] elemento dell'array
+        document.getElementsByClassName("heroImage")[current].classList.add("active");
 
-//     //come sopra ma per le foto della thumbnail
-//         document.querySelector(".thumb.active").remove("active");
-//         document.getElementsByClassName("thumb")[current].classList.add("active");
-//     }
-// })
+    //come sopra ma per le foto della thumbnail
+        document.querySelector(".thumb.active").remove("active");
+        document.getElementsByClassName("thumb")[current].classList.add("active");
+    }
+})
