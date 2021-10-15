@@ -34,7 +34,7 @@ const heroImgCont = document.querySelector(".heroImageContainer");
 
 let heroImage = ``;
 // let thumb = ``;
-let current = 3;
+let current = 0;
 
 
 // ora viene il macello: comincio il/i ciclo/i
@@ -61,7 +61,6 @@ for (let i = 0; i < title.length; i++) {
             </div>
         </div>`;
 }
-console.log(heroImage);
 
 // qua stampo tutto il ciclo sopra per avere le 5 hero image nascoste
 heroImgCont.innerHTML = heroImage;
@@ -71,10 +70,11 @@ document.getElementsByClassName("heroImage")[current].classList.add("active");
 document.getElementsByClassName("thumb")[current].classList.add("active");
 
 // event listener con freccetta giù
-document.getElementById("down").addEventListener ("click", function(){
+const down = document.getElementById("down");
+down.addEventListener ("click", function(){
     //current conta nostra posizione, il if minore a 4 è tentativo per rendere ciclo "infinito"
     if ([current] < 4) {
-        ++[current];
+        ++current;
 
     //qua cerco di selezionare "tutte" quelle che hanno active e glie lo levo, poi lo metto alla nostra posizione
         document.querySelector(".heroImage.active").remove("active");
@@ -84,5 +84,10 @@ document.getElementById("down").addEventListener ("click", function(){
     //come sopra ma per le foto della thumbnail
         document.querySelector(".thumb.active").remove("active");
         document.getElementsByClassName("thumb")[current].classList.add("active");
+    // }
+    }
+    else {
+        let current = 0;
+        console.log([current]);
     }
 })
