@@ -116,3 +116,5 @@ document.getElementById("up").addEventListener ("click", function(){
     //
     }
 )
+
+//conto di provare a farlo anche con il metodo che avevo cominciato ad utilizzare prima della riunione pomeridiana, ovvero invece di sostituire la classe con il display block nell'hero image sostituisco la foto
