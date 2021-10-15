@@ -42,8 +42,8 @@ body {
 
 .heroText {
     position: absolute;
-    bottom: 1rem;
-    right: 1rem;
+    bottom: 1.5rem;
+    right: 1.5rem;
     text-align: right;
     width: 70%;
     color: white;
@@ -52,4 +52,31 @@ body {
 .active {
     filter: brightness(1);
     border: 2px solid white;
+}
+
+button {
+    height: 20px;
+    width: 20px;
+    background-color: rgb(238, 228, 228);
+    border-radius: 50%;
+    z-index: 2;
+    position:absolute;
+    border-style: none;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+button.up {   
+    top: 10px;  
+}
+
+button.down {   
+    bottom: 10px;  
+}
+#svezia {
+    position: relative;
+}
+
+#paradise {
+    position: relative;
 }
