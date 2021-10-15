@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+#container {
+    margin: auto;
+    width: 835px;
+    height: 300px;
+    margin-top: 10%;
+    display: flex;
+
+}
+
+#heroImage {
+    width: 700px;
+    height: 300px;
+    position: relative;
+    background-color: turquoise;
+}
+
+#imageSelector {
+    height: 300px;
+    width: 135px;
+}
+
+.thumb {
+    opacity: 0.8;
+    height: calc(300px / 5);
+}
+
+.thumb img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.heroText {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    text-align: right;
+    width: 70%;
+    color: white;
+}
+
+.active {
+    filter: brightness(1);
+    border: 2px solid white;
+}
