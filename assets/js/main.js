@@ -91,4 +91,4 @@ down.addEventListener ("click", function(){
     }
 )
 
-//ho fatto questa cosa
+//sono stato bloccato un'ora che mi si rompeva tutto perché mi mancavano i classlist prima del remove e per il secondo ho copiato il primo, poi avevo messo else 0 in fondo, funzionava ma mi "saltava" un click (perché giustamente in quella iterazione faceva solo quello), ora che l'ho messo sopra funziona
