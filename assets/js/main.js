@@ -87,8 +87,32 @@ down.addEventListener ("click", function(){
     //come sopra ma per le foto della thumbnail
         document.querySelector(".thumb.active").classList.remove("active");
         document.getElementsByClassName("thumb")[current].classList.add("active");
-    // }
+    //
     }
 )
 
 //sono stato bloccato un'ora che mi si rompeva tutto perché mi mancavano i classlist prima del remove e per il secondo ho copiato il primo, poi avevo messo else 0 in fondo, funzionava ma mi "saltava" un click (perché giustamente in quella iterazione faceva solo quello), ora che l'ho messo sopra funziona
+
+
+// copio e incollo sopra e lo adatto ad up
+
+
+document.getElementById("up").addEventListener ("click", function(){
+    //current conta nostra posizione, il if minore a 4 è tentativo per rendere ciclo "infinito"
+    if ([current] > 0) {
+        --current;
+    } else {
+        current = 4;
+    }
+
+    //qua cerco di selezionare "tutte" quelle che hanno active e glie lo levo, poi lo metto alla nostra posizione
+        document.querySelector(".heroImage.active").classList.remove("active");
+    //uso get el by class name per avere un array di tutti gli elementi con quella classe, così da poter selezionare l'[n-esimo] elemento dell'array
+        document.getElementsByClassName("heroImage")[current].classList.add("active");
+
+    //come sopra ma per le foto della thumbnail
+        document.querySelector(".thumb.active").classList.remove("active");
+        document.getElementsByClassName("thumb")[current].classList.add("active");
+    //
+    }
+)
