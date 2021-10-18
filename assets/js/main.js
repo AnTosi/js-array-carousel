@@ -73,12 +73,12 @@ document.getElementsByClassName("thumb")[current].classList.add("active");
 const down = document.getElementById("down");
 down.addEventListener ("click", function(){
     //current conta nostra posizione, il if minore a 4 è tentativo per rendere ciclo "infinito"
-    if ([current] < 4) {
+    if ([current] < items.length - 1) {
         ++current;
     } else {
         current = 0;
     }
-
+    console.log(current);
     //qua cerco di selezionare "tutte" quelle che hanno active e glie lo levo, poi lo metto alla nostra posizione
         document.querySelector(".heroImage.active").classList.remove("active");
     //uso get el by class name per avere un array di tutti gli elementi con quella classe, così da poter selezionare l'[n-esimo] elemento dell'array
@@ -102,9 +102,9 @@ document.getElementById("up").addEventListener ("click", function(){
     if ([current] > 0) {
         --current;
     } else {
-        current = 4;
+        current = items.length - 1;
     }
-
+    console.log(current);
     //qua cerco di selezionare "tutte" quelle che hanno active e glie lo levo, poi lo metto alla nostra posizione
         document.querySelector(".heroImage.active").classList.remove("active");
     //uso get el by class name per avere un array di tutti gli elementi con quella classe, così da poter selezionare l'[n-esimo] elemento dell'array
